@@ -17,7 +17,7 @@ class App extends Component {
       persons: [
         { name: newName, age: 25 },
         { name: 'Xavier', age: 26 },
-        { name: 'newName', age: 37 }
+        { name: 'Yannick', age: 37 }
       ]
     });
   };
@@ -30,14 +30,24 @@ class App extends Component {
         { name: 'Yannick', age: 37 }
       ]
     });
-  }
+  };
 
   render() {
+    const style = {
+      backgoundColor: 'white',
+      font: 'inherit',
+      border: '1px solid pink',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
     return (
       <div className="App">
         <h1>Hi, i'm a React App</h1>
         <p>This is really working !</p>
-        <button onClick={() => this.switchNameHandler('Sylvie !!')}>Click here
+        <button
+          style={style}
+          onClick={() => this.switchNameHandler('Sylvie !!')}>Click here
         </button>
         <Person name={this.state.persons[0].name}
                 age={this.state.persons[0].age}/>
